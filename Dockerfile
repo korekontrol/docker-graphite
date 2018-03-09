@@ -9,12 +9,10 @@ RUN apt-get update \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
+ADD content/ /
+
 RUN cp /usr/share/graphite-web/apache2-graphite.conf /etc/apache2/sites-available/graphite.conf \
     && a2ensite graphite \
     && a2dissite 000-default
-
-# Current docker version of Ubuntu xenial does not allow input onto rootfs, so two ADDs have to be used.
-ADD run.sh /srv/run.sh
-ADD default-graphite-carbon /etc/default/graphite-carbon
 
 CMD /srv/run.sh

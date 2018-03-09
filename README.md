@@ -3,7 +3,7 @@
 Simple graphite installation.
 
 # Security
-When cntainer starts, it tries to create django admin user. It's email can be set using env variable. To set admin's password, you should execute:
+When container starts, it tries to create django admin user. It's email can be set using env variable. To set admin's password, you should execute:
 `docker exec -ti <container_name> graphite-manage changepassword admin`
 
 # Env variables
