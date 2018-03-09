@@ -1,7 +1,6 @@
-FROM debian
+FROM debian:sid
 
 RUN apt-get update \
-    && apt-get -qy upgrade  \
     && DEBIAN_FRONTEND=noninteractive apt-get -qy install \
         apache2 \
         graphite-carbon \
