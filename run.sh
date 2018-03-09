@@ -1,8 +1,8 @@
 #!/bin/bash
 
 graphite-manage syncdb --noinput
-graphite-manage createsuperuser --noinput --username=admin --email=admin@graphite.host
-graphite-build-search-index
+graphite-manage createsuperuser --noinput --username=admin --email=admin@graphite.host || true
+graphite-build-search-index || true
 
 mkdir -p /var/lib/graphite/whisper
 chown -R _graphite:_graphite /var/lib/graphite /var/log/{carbon,graphite}
