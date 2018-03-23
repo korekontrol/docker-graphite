@@ -1,6 +1,6 @@
 #!/bin/bash
 
-graphite-manage syncdb --noinput
+graphite-manage migrate --noinput
 graphite-manage createsuperuser --noinput --username=admin --email=${GRAPHITE_ADMIN_EMAIL:-admin@graphite.host} || true
 graphite-build-search-index || true
 
