@@ -14,7 +14,7 @@ When container starts, it tries to create django admin user. It's email can be s
 | `SECRET_KEY` | (none) | django secret key, should be set to a unique random value for each instance of the container |
 
 ## Credits
-Created by [Marek Obuchowicz](https://github.com/marek-obuchowicz) from [KoreKontrol](https://www.korekontrol.eu/).
+Created by [Marek Obuchowicz](https://github.com/marek-obuchowicz) from [KoreKontrol Germany GmbH](https://www.korekontrol.eu/).
 
 Many thanks to `bebehei`
 
