@@ -12,5 +12,5 @@ service apache2 start
 service carbon-cache start
 
 while (pidof apache2 && pidof -x carbon-cache) >/dev/null; do
-	sleep 10
+	sleep 15
 done
